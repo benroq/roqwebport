@@ -1,0 +1,2589 @@
+@charset "utf-8";
+ /* COLORS
+    #2a2627 - DARK GREY
+    #F2F2F2 - OFF WHITE
+    #9b9b43 - GREEN
+*/
+
+/* general style */
+
+html {
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+
+/*------INDEX PAGE GRID------*/
+#index_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px,1fr));    
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 15px;
+    grid-template-areas: 
+        'header1        header1'
+        'design1        design2'
+        'link1          link1'
+        'header2        header2'
+        'drawing1       drawing2'
+        'link2          link2'
+        'contact        contact'
+        'footer         footer'
+
+    ;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+#header1{
+    grid-area: header1;
+}
+
+#design_img1{
+    grid-area: design1;
+}
+
+#design_img2{
+    grid-area: design2;
+}
+
+#index_link1{
+    grid-area: link1;
+}
+
+#header2{
+    grid-area: header2;
+}
+
+#drawing_img1{
+    grid-area: drawing1;
+}
+
+#drawing_img2{
+    grid-area: drawing2;
+}
+
+#index_link2{
+    grid-area: link2;
+}
+
+#contact{
+    grid-area: contact;
+}
+
+#footer{
+    grid-area: footer;
+}
+
+
+
+
+/*---ABOUT ME GRIDS---*/
+
+#aboutme_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px,1fr));    
+    grid-template-rows: auto auto auto auto;
+    gap: 15px;
+    grid-template-areas: 
+        'img                 header'
+        'img                 text1'
+        'img                 text1'
+    ;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+#about_header{
+    grid-area: header;
+}
+
+#aboutme_img{
+    grid-area: img;
+}
+
+#about_parapgraph1{
+    grid-area: text1;
+    margin-bottom: 2em;
+}
+
+#aboutme_img img:hover {
+    transform: scale(1.05)
+}
+
+
+/*--IMAGE GALLERY GRID--*/
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 4em;
+    justify-items: center;
+  
+}
+
+.gallery img{
+    width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.images{
+    margin-top: -2em;
+    margin-bottom: -2em;
+}
+
+.gallery p{
+    margin-bottom: 2em;
+}
+
+#materials{
+    margin-top: 3em;
+    margin-bottom: 5em;
+}
+
+#materials h3{
+    text-decoration: none;
+}
+
+#materials p{
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 3em;
+    line-height: 2em;
+}
+
+
+
+
+
+/*---DESIGN PAGE GRID---*/
+
+#design_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    gap: 15px;
+    grid-template-areas: 
+      'movieposter          movie1          movie2'
+      'movieposter          moviedesc       moviedesc'         
+      'album1               album11          album12'
+      'album1               album1desc       album1desc'   
+      'album2               album21          album22'
+      'album2               album2desc       album2desc'    
+      'quote                quote1          quote2'
+      'quote                quotedesc       quotedesc'
+      'flyer                flyer1          flyer2'
+      'flyer                flyerdesc       flyerdesc'
+      'logoheader           logoheader       logoheader'
+      'logo1                logo1mockup      logodesc'
+      'logo2                logo2mockup      logodesc'
+      'designcontact        designcontact     designcontact'
+      'designfooter         designfooter      designfooter'
+
+
+    
+    ;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+#movie_poster{
+    grid-area: movieposter;
+}
+
+#moviemockup1{
+    grid-area: movie1;
+    margin-top: 100px;
+}
+
+#moviemockup2{
+    grid-area: movie2;
+    margin-top: 100px;
+}
+
+#movie_description{
+    grid-area: moviedesc;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 75px;
+}
+
+#quote_post{
+    grid-area: quote;
+    margin-top: 100px;
+}
+
+#quotemockup1{
+    grid-area: quote1;
+    margin-top: 240px;
+}
+
+#quotemockup2{
+    grid-area: quote2;
+    margin-top: 240px;
+}
+
+#quotedesc{
+    grid-area: quotedesc;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+#flyer{
+    grid-area: flyer;
+    margin-top: 150px;
+}
+
+#flyermockup1{
+    grid-area: flyer1;
+    margin-top: 250px;
+}
+
+#flyermockup2{
+    grid-area: flyer2;
+    margin-top: 250px;
+}
+
+#flyerdesc{
+    grid-area: flyerdesc;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+#album1{
+    grid-area: album1;
+    margin-top: 120px;
+}
+
+#album1mockup1{
+    grid-area: album11;
+    margin-top: 265px;
+}
+
+#album1mockup2{
+    grid-area: album12;
+    margin-top: 265px;
+}
+
+#album1desc{
+    grid-area: album1desc;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+#album2{
+    grid-area: album2;
+    margin-top: 100px;
+}
+
+#album2mockup1{
+    grid-area: album21;
+    margin-top: 240px;
+}
+
+#album2mockup2{
+    grid-area: album22;
+    margin-top: 240px;
+}
+
+#album2desc{
+    grid-area: album2desc;
+    margin-left: 100px;
+    margin-right: 50px; 
+}
+
+#logoheader{
+    grid-area: logoheader;
+    margin-top: 130px;
+    margin-right: 800px;
+}
+
+#logo1{
+    grid-area: logo1;
+}
+
+#logo1mockup{
+    grid-area: logo1mockup;
+}
+
+#logo2{
+    grid-area: logo2;
+    margin-top: 20px;
+}
+
+#logo2mockup{
+    grid-area: logo2mockup;
+    margin-top: 20px;
+
+}
+
+#logodesc{
+    grid-area: logodesc;
+    margin-top: 260px;
+}
+
+#designcontact{
+    grid-area: designcontact;
+    margin-top: 100px;
+}
+  
+#designfooter{
+    grid-area: designfooter;
+}
+
+/*--DRAWING PAGE GRID--*/
+
+#drawing_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+    grid-template-rows: auto auto auto auto;
+    gap: 15px;
+    grid-template-areas: 
+        'title1                 title1              title1'
+        'draw1                 color1               color2'
+        'draw1desc              draw1desc           draw1desc'
+        'title2                 title2              title2'
+        'draw2                  ball1               ball2'
+        'balldesc               balldesc            balldesc'
+        'title3                 title3              title3'
+        'draw3                  graphite11          graphite12'
+        'graphite1desc          graphite1desc       graphite1desc'
+        'title4                 title4              title4'
+        'draw4                  graphite21          graphite22'
+        'graphite2desc          graphite2desc       graphite2desc'
+        'drcontact              drcontact           drcontact'
+        'drfooter               drfooter            drfooter'
+    ;
+    justify-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+#draw1title{
+    grid-area: title1;
+} 
+
+#draw1{
+    grid-area: draw1;
+    margin-bottom: 15px;
+}
+
+#colormockup1{
+    grid-area: color1;
+    margin-bottom: 15px;
+    padding-right: 55px;
+}
+
+#colormockup2{
+    grid-area: color2;
+    margin-bottom: 15px;
+    padding-right: 25px;
+}
+
+#draw1desc{
+    grid-area: draw1desc;
+    margin-bottom: 50px;
+    margin-left: 95px;
+    margin-right: 50px;
+}
+
+#draw2title{
+    grid-area: title2;
+}
+
+
+#draw2{
+    grid-area: draw2;
+    margin-bottom: 15px;
+}
+
+#ballpointmockup1{
+    grid-area: ball1;
+    margin-bottom: 15px;
+}
+
+#ballpointmockup2{
+    grid-area: ball2;
+    margin-bottom: 15px;
+}
+
+#ballpointdesc{
+    grid-area: balldesc;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#draw3title{
+    grid-area: title3;
+}
+
+#draw3{
+    grid-area: draw3;
+    margin-bottom: 15px;
+}
+
+#graphite1mockup1{
+    grid-area: graphite11;
+    margin-bottom: 15px;
+    padding-right: 55px;
+}
+
+#graphite1mockup2{
+    grid-area: graphite12;
+    margin-bottom: 15px;
+    padding-right: 25px;
+}
+
+#graphite1desc{
+    grid-area: graphite1desc ;
+    margin-bottom: 50px;
+    margin-left: 85px;
+    margin-right: 50px;
+}
+
+#draw4title{
+    grid-area: title4;
+}
+
+#draw4{
+    grid-area: draw4;
+    margin-bottom: 15px;
+}
+
+#graphite2mockup1{
+    grid-area: graphite21;
+    margin-bottom: 15px;
+    padding-right: 55px;
+}
+
+#graphite2mockup2{
+    grid-area: graphite22;
+    margin-bottom: 15px;
+    padding-right: 25px;
+}
+
+#graphite2desc{
+    grid-area: graphite2desc;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+#drcontact{
+    grid-area: drcontact;
+}
+
+#drfooter{
+    grid-area: drfooter;
+}
+
+
+/*----BODY STYLES---*/
+
+body{
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    background-color: #F2F2F2; 
+    max-width: 1200px;
+    justify-content: center;
+}
+
+h1{
+    font: bold 3em times, serif;
+    color: #2a2627;
+   
+    text-align: center;
+}
+
+h2{
+    color: #2a2627;
+    font: bold 2em times, serif;
+    text-align: center;
+    font-size: 27pt;
+}
+
+h3{
+    color: #2a2627;
+    font: bold 1.5em times, serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+p{
+    color: #2a2627;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+footer p{
+    color: #9b9b43;
+
+
+
+
+}
+
+
+
+
+
+
+/*--INDEX BODY STYLES--*/
+
+#contact{
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#contact a{
+    color: #2a2627;
+}
+
+#contact li{
+    list-style: none;
+    color: #2a2627;
+    padding: 5px;
+    padding-right: 45px;
+}
+
+#contact a:hover{
+    color: #9b9b43;
+}
+
+
+
+#index_grid img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 100%;
+}
+
+#welcome_header{
+    padding-top: 30px;
+}
+
+#mini_about{
+    margin-top: 10px;
+   padding-top: 10px;
+   padding-bottom: 40px;
+   font-size: 20pt;
+   font-family: 'Times New Roman', Times, serif;
+   margin-left: 150px;
+   margin-right: 150px;
+}
+
+#header1{
+   padding-bottom: 10px;
+}
+
+#header2{
+    padding-top: 50px;
+    padding-bottom: 10px;
+ }
+
+
+#index_link1 a{
+    color: #F2F2F2;
+    text-decoration: none
+}
+
+#index_link1 a:hover{
+    color: #9b9b43;
+}
+
+#index_link2 a{
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+#index_link2 a:hover{
+    color: #9b9b43;
+}
+
+#design_img2 p{
+    text-align: center;
+}
+
+.button{
+    background-color: #2a2627;
+    border: none;
+    color: #F2F2F2;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 3px;
+    padding: 20px 40px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#mini_about a:hover{
+    color: #9b9b43;
+}
+
+
+/*--ABOUT BODY STYLES--*/
+
+#about_header{
+    padding-top: 35px;
+    padding-bottom: 0;
+    margin-top: 15px;
+    
+}
+
+
+#about_paragraph1 p{
+    margin-top: -10px;
+    margin-left: 3em;
+    padding-left: 17px;
+    padding-bottom: 50px;
+    text-align: left;
+    line-height: 30px;
+}
+
+#aboutme_img{
+    margin-right: 10px;
+    padding-top: 80px;
+    margin-left: 15px;
+}
+
+
+#about_contact{
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+#about_contact a{
+    color: #2a2627;
+}
+
+#about_contact li{
+    list-style: none;
+    color: #2a2627;
+    padding: 5px;
+    padding-right: 45px;
+}
+
+#about_contact a:hover{
+    color: #9b9b43;
+}
+
+
+
+/* DESIGN BODY STYLES */
+
+
+#design_grid h2{
+    color: #2a2627;
+}
+
+#design_grid p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+}
+
+#design_grid img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 100%;
+}
+
+
+#designcontact{
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+#designcontact a{
+    color: #2a2627;
+}
+
+#designcontact li{
+    list-style: none;
+    color: #2a2627;
+    padding: 5px;
+    padding-right: 45px;
+}
+
+#designcontact a:hover{
+    color: #9b9b43;
+}
+
+
+
+
+
+/*---DRAWING PAGE BODY STYLES---*/
+
+#drawing_grid h1{
+    font-size: 47pt;
+}
+
+#drawing_grid h2{
+    color: #2a2627;
+}
+
+#drawing_grid img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+#drcontact{
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+#drcontact a{
+    color: #2a2627;
+}
+
+#drcontact li{
+    list-style: none;
+    color: #2a2627;
+    padding: 5px;
+    padding-right: 45px;
+}
+
+#drcontact a:hover{
+    color: #9b9b43;
+}
+
+
+
+/* ---NAV BAR--- */
+
+.nav_bar{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: .9em;
+    background-color: #2a2627;
+    margin: 0;
+}
+
+li.logo{
+    margin-right: auto;
+}
+
+/* ---NAV LINKS--- */
+
+.nav_bar a {
+    color: #9b9b43;
+    padding: 60px 40px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.nav_bar li{
+  margin: auto;
+}
+
+/*hover style*/
+
+.nav_bar a:hover {
+    color: #ece8dc;
+}
+
+
+/*----HERO IMAGE/HEADER*/
+.hero_image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/heroimage.jpeg);
+    height: 405px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative ;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hero_header{
+    text-align: left;
+    position: absolute;
+    color: white;
+    top: 40%;
+    font-size: 3em;
+    margin: 20px;
+}
+
+
+
+.clock {
+    position: absolute;
+    top: 75%;
+    left: 13%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #F2F2F2;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 7px;
+}
+
+
+
+
+/*-----INDEX MEDIA QUERY-----*/
+
+@media screen and ( max-width: 1000px){
+    #index_grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px,1fr));    
+        grid-template-rows: auto auto auto auto auto auto auto;
+        gap: 15px;
+        grid-template-areas: 
+            'header1        header1'
+            'design1        design2'
+            'link1          link1'
+            'header2        header2'
+            'drawing1       drawing2'
+            'link2          link2'
+            'contact        contact'
+            'footer         footer'
+    
+        ;
+        justify-items: center;
+        margin: 0 auto;
+    }
+
+    #header1{
+        grid-area: header1;
+        margin-right: 60px;
+    }
+    
+    #design_img1{
+        grid-area: design1;
+        width: 350px;
+    }
+    
+    #design_img2{
+        grid-area: design2;
+        width: 350px;
+        margin-right: 150px;
+    }
+    
+    #index_link1{
+        grid-area: link1;
+        margin-right: 60px;
+    }
+    
+    #header2{
+        grid-area: header2;
+        margin-right: 60px;
+    }
+    
+    #drawing_img1{
+        grid-area: drawing1;
+        width: 350px;
+    }
+    
+    #drawing_img2{
+        grid-area: drawing2;
+        width: 350px;
+        margin-right: 150px;
+    }
+    
+    #index_link2{
+        grid-area: link2;
+        margin-right: 60px;
+    }
+    
+    #contact{
+        grid-area: contact;
+    }
+    
+    #footer{
+        grid-area: footer;
+    }
+
+    #mini_about{
+        margin-left: 125px;
+        font-size: 18pt;
+    }
+}
+
+@media screen and ( max-width: 800px){
+    #index_grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));    
+        grid-template-rows: auto auto auto auto auto auto auto;
+        gap: 15px;
+        grid-template-areas: 
+            'header1        header1'
+            'design1        design1'
+            'design2       design2'
+            'link1          link1'
+            'header2        header2'
+            'drawing1       drawing1'
+            'drawing2       drawing2'
+            'link2          link2'
+            'contact        contact'
+            'footer         footer'
+    
+        ;
+        justify-items: center;
+        margin: 0 auto;
+    }
+
+    #header1{
+        grid-area: header1;
+        margin-left: 135px;
+    }
+    
+    #design_img1{
+        grid-area: design1;
+        width: 315px;
+        margin-left: 70px;
+    }
+    
+    #design_img2{
+        grid-area: design2;
+        width: 315px;
+        margin-left: 220px;
+    }
+    
+    #index_link1{
+        grid-area: link1;
+        margin-left: 135px;
+    }
+    
+    #header2{
+        grid-area: header2;
+        margin-left: 135px;
+    }
+    
+    #drawing_img1{
+        grid-area: drawing1;
+        width: 315px;
+        margin-left: 70px;
+    }
+    
+    #drawing_img2{
+        grid-area: drawing2;
+        width: 315px;
+        margin-left: 220px;
+    }
+    
+    #index_link2{
+        grid-area: link2;
+        margin-left: 135px;
+    }
+    
+    #contact{
+        grid-area: contact;
+        margin-left: 60px;
+    }
+
+    #contact h3{
+        font-size: 15pt;
+    }
+    
+    #footer{
+        grid-area: footer;
+        font-size: 8pt;
+        margin-left: 50px;
+    }
+
+    #mini_about{
+        margin-left: 225px;
+        font-size: 15pt;
+
+    }
+
+}
+
+
+@media screen and (max-width: 600px){
+    #index_grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));    
+        grid-template-rows: auto auto auto auto auto auto auto;
+        gap: 15px;
+        grid-template-areas: 
+            'header1        header1'
+            'design1        design1'
+            'design2       design2'
+            'link1          link1'
+            'header2        header2'
+            'drawing1       drawing1'
+            'drawing2       drawing2'
+            'link2          link2'
+            'contact        contact'
+            'footer         footer'
+    
+        ;
+        justify-items: center;
+        margin: 0 auto;
+    }
+
+    #header1{
+        grid-area: header1;
+        margin-left: 145px;
+    }
+    
+    #design_img1{
+        grid-area: design1;
+        width: 250px;
+        margin-left: 70px;
+    }
+    
+    #design_img2{
+        grid-area: design2;
+        width: 250px;
+        margin-left: 220px;
+    }
+    
+    #index_link1{
+        grid-area: link1;
+        margin-left: 130px;
+    }
+    
+    #header2{
+        grid-area: header2;
+        margin-left: 145px;
+    }
+    
+    #drawing_img1{
+        grid-area: drawing1;
+        width: 250px;
+        margin-left: 70px;
+    }
+    
+    #drawing_img2{
+        grid-area: drawing2;
+        width: 250px;
+        margin-left: 220px;
+    }
+    
+    #index_link2{
+        grid-area: link2;
+        margin-left: 130px;
+    }
+    
+    #contact{
+        grid-area: contact;
+        margin-left: 60px;
+        font-size: small;
+    }
+
+    #contact h3{
+        font-size: 13pt;
+    }
+    
+    #footer{
+        grid-area: footer;
+        font-size: 8pt;
+        margin-left: 50px;
+    }
+
+    #mini_about{
+        margin-left: 215px;
+        font-size: 13pt;
+
+    }
+
+    .logo{
+        width: 75px;
+    }
+
+    .nav_bar a {
+        color: #9b9b43;
+        padding: 60px 40px;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: x-small;
+        margin-left: .75em;
+    }
+}
+
+
+
+
+
+
+/*---ABOUT MEDIA QUERY'S---*/
+    @media screen and (max-width: 1000px){
+        #aboutme_grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px,1fr));    
+            grid-template-rows: auto auto auto auto;
+            gap: 15px;
+            grid-template-areas: 
+                'img                 header'
+                'img                 text1'
+                'img                 text1'
+
+            ;
+            justify-items: center;
+            margin: 0 auto;
+        }
+
+        #about_header{
+            grid-area: header;
+        }
+        
+        #aboutme_img{
+            grid-area: img;
+        }
+
+        #aboutme_img img{
+            width: 450px;
+        }
+
+        #about_parapgraph1{
+            grid-area: text1;  
+        }
+
+        #about_paragraph1 p{
+            margin-right: 40px;
+            margin-left: -15px;
+        }
+        #about_header h1{
+            font-size: 2.5em;
+            margin-right: 20px;
+            
+        }
+        
+        
+        #about_contact{
+            grid-area: about_contact;
+        }
+        
+        #about_footer{
+            grid-area: about_footer;
+        }
+
+    }
+
+
+
+@media screen and (max-width: 800px){
+        #aboutme_grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px,1fr));    
+            grid-template-rows: auto auto auto auto;
+            gap: 15px;
+            grid-template-areas: 
+                'img                 img'
+                'header              header'
+                'text1                 text1'
+            ;
+            justify-items: center;
+            margin: 0 auto;
+        }
+
+
+        #aboutme_img img{
+            width: 550px;
+        }
+
+        #about_paragraph1 p{
+            margin-right: 1.5em;
+            margin-left: 1.5em;
+        }
+
+
+        #materials{
+            margin-top: 1em;
+        }
+
+}
+
+@media screen and (max-width: 700px){
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+        grid-template-rows: 1fr 1fr;
+        gap: 4em;
+        justify-items: center;
+        
+    }
+
+    .gallery img{
+        margin-left: 8.5em;
+    }
+
+    .gallery p{
+        margin-top: 2em;
+        margin-bottom: 4em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+
+}
+
+
+@media screen and (max-width: 600px){
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+        grid-template-rows: 1fr 1fr;
+        gap: 4em;
+        justify-items: center;
+        
+    }
+
+    .gallery img{
+        margin-left: 6em;
+    }
+
+    .gallery p{
+        margin-top: 2em;
+        margin-bottom: 4em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+
+    #aboutme_img img{
+        width: 400px;
+    }
+}
+
+
+
+
+/*---DESIGN GRID MEDIA QUERY'S---*/
+
+
+@media screen and (max-width: 1000px){
+
+    #design_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;    
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        gap: 15px;
+        grid-template-areas: 
+          'movieposter          movie1'
+          'movie2               movie2'
+          'moviedesc            moviedesc'         
+          'album1               album11'
+          'album12              album12'
+          'album1desc           album1desc'   
+          'album2               album21'
+          'album22              album22'
+          'album2desc           album2desc'    
+          'quote                quote1'         
+          'quote2               quote2'
+          'quotedesc            quotedesc'
+          'flyer                flyer1'          
+          'flyer2               flyer2'
+          'flyerdesc            flyerdesc'
+          'logoheader           logoheader'
+          'logo1                logo1mockup'
+          'logo2                logo2mockup'  
+          'logodesc             logodesc'
+          'designcontact        designcontact'
+          'designfooter         designfooter'
+    
+    
+        
+        ;
+        justify-items: center;
+        margin: 0 auto;
+    }
+
+
+
+
+    #movie_poster{
+        grid-area: movieposter;
+        margin-top: 2em;
+    }
+
+    #movie_poster h2{
+        margin-left: 1em;
+    }
+
+    #movie_poster img{
+        width: 25em;
+        margin-left: 5em;
+    }
+    
+    #moviemockup1{
+        grid-area: movie1;
+        margin-top: 100px;
+    }
+
+    #moviemockup1 img{
+        height: 31em;
+        margin-right: 5em;
+        margin-top: 2em;
+    }
+    
+    #moviemockup2{
+        grid-area: movie2;
+        margin-top: 3em;
+    }
+
+    #moviemockup2 img{
+        height: 25em;
+    }
+
+    
+    #movie_description{
+        grid-area: moviedesc;
+        margin-left: 100px;
+        margin-right: 50px;
+        margin-bottom: 75px;
+    }
+    
+    #quote_post{
+        grid-area: quote;
+        margin-top: 100px;
+    }
+
+    #quote_post img{
+        width: 25em;
+        margin-left: 5em;
+    }
+    
+    #quotemockup1{
+        grid-area: quote1;
+        margin-top: 243px;
+    }
+
+    #quotemockup1 img{
+        height: 31em;
+        margin-right: 5em;
+    }
+    
+    #quotemockup2{
+        grid-area: quote2;
+        margin-top: 3em;
+    }
+
+    #quotemockup2 img{
+        height: 25em;
+    }
+    
+    #quotedesc{
+        grid-area: quotedesc;
+        margin-left: 100px;
+        margin-right: 50px;
+    }
+    
+    #flyer{
+        grid-area: flyer;
+        margin-top: 150px;
+    }
+
+    #flyer img{
+        width: 25em;
+        margin-left: 5em;
+    }
+    
+    #flyermockup1{
+        grid-area: flyer1;
+        margin-top: 250px;
+    }
+
+    #flyermockup1 img{
+        height: 32em;
+        margin-right: 5em;
+    }
+    
+    #flyermockup2{
+        grid-area: flyer2;
+        margin-top: 3em;
+    }
+
+    #flyermockup2 img{
+        height: 25em;
+    }
+    
+    #flyerdesc{
+        grid-area: flyerdesc;
+        margin-left: 100px;
+        margin-right: 50px;
+    }
+    
+    #album1{
+        grid-area: album1;
+        margin-top: 120px;
+    }
+
+    #album1 img{
+        width: 25em;
+        margin-left: 5em;
+    }
+    
+    #album1mockup1{
+        grid-area: album11;
+        margin-top: 265px;
+    }
+
+    #album1mockup1 img{
+        height: 34em;
+        margin-right: 5em;
+    }
+    
+    #album1mockup2{
+        grid-area: album12;
+        margin-top: 3em;
+    }
+
+    #album1mockup2 img{
+        height: 25em;
+    }
+    
+    #album1desc{
+        grid-area: album1desc;
+        margin-left: 100px;
+        margin-right: 50px;
+    }
+    
+    #album2{
+        grid-area: album2;
+        margin-top: 100px;
+    }
+    
+    #album2 img{
+        width: 25em;
+        margin-left: 5em;
+    }
+
+    #album2mockup1{
+        grid-area: album21;
+        margin-top: 240px;
+    }
+
+    #album2mockup1 img{
+        height: 33em;
+        margin-right: 5em;
+    }
+    
+    #album2mockup2{
+        grid-area: album22;
+        margin-top: 3em;
+    }
+    
+    #album2mockup2{
+        height: 25em;
+    }
+
+    #album2desc{
+        grid-area: album2desc;
+        margin-left: 100px;
+        margin-right: 50px; 
+    }
+    
+    #logoheader{
+        grid-area: logoheader;
+        margin-top: 130px;
+        margin-right: -.2em;
+    }
+    
+    #logo1{
+        grid-area: logo1;
+        margin-left: 12em;
+    }
+    
+    
+    #logo1mockup{
+        grid-area: logo1mockup;
+        margin-right: 8em;
+    }
+    
+    #logo2{
+        grid-area: logo2;
+        margin-top: 20px;
+        margin-left: 12em;
+    }
+    
+    #logo2mockup{
+        grid-area: logo2mockup;
+        margin-top: 20px;
+        margin-right: 8em;
+    }
+    
+    #logodesc{
+        grid-area: logodesc;
+        margin-top: 2em;
+    }
+
+    #logodesc p{
+        margin-right: 9em;
+        margin-left: 9em;
+    }
+    
+    #designcontact{
+        grid-area: designcontact;
+        margin-top: 100px;
+    }
+      
+    #designfooter{
+        grid-area: designfooter;
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+
+
+    #design_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;    
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        gap: 15px;
+        grid-template-areas: 
+          'movieposter          movieposter'
+          'movie1               movie1'
+          'movie2               movie2'
+          'moviedesc            moviedesc'         
+          'album1               album1'
+          'album11              album11'
+          'album12              album12'
+          'album1desc           album1desc'   
+          'album2               album2'
+          'album21               album21'
+          'album22              album22'
+          'album2desc           album2desc'    
+          'quote                quote'              
+          'quote1               quote1'         
+          'quote2               quote2'
+          'quotedesc            quotedesc'
+          'flyer                flyer'
+          'flyer1               flyer1'          
+          'flyer2               flyer2'
+          'flyerdesc            flyerdesc'
+          'logoheader           logoheader'
+          'logo1                logo1'
+          'logo1mockup          logo1mockup'
+          'logo2                logo2'
+          'logo2mockup          logo2mockup'  
+          'logodesc             logodesc'
+          'designcontact        designcontact'
+          'designfooter         designfooter'
+    
+    
+        
+        ;
+        justify-items: center;
+        margin: 0 auto;
+    }
+
+
+    #movie_poster{
+        grid-area: movieposter;
+        margin-top: 2em;
+    }
+
+    #movie_poster h2{
+        margin-left: 1em;
+    }
+
+    #movie_poster img{
+        width: 25em;
+        margin-left: 2.5em;
+    }
+    
+    #moviemockup1{
+        grid-area: movie1;
+        margin-top: 10px;
+        margin-left: 7em;
+    }
+
+    #moviemockup1 img{
+        height: 33em;
+        margin-top: 2em;
+    }
+    
+    #moviemockup2{
+        grid-area: movie2;
+        margin-top: 3em;
+    }
+
+    #moviemockup2 img{
+        height: 25em;
+    }
+
+    
+    #movie_description{
+        grid-area: moviedesc;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 75px;
+    }
+    
+    #quote_post{
+        grid-area: quote;
+        margin-top: 100px;
+    }
+
+    #quote_post img{
+        width: 25em;
+        margin-left: 5em;
+    }
+    
+    #quotemockup1{
+        grid-area: quote1;
+        margin-top: 50px;
+    }
+
+    #quotemockup1 img{
+        height: 31em;
+        margin-right: 1.5em;
+    }
+    
+    #quotemockup2{
+        grid-area: quote2;
+        margin-top: 3em;
+    }
+
+    #quotemockup2 img{
+        height: 25em;
+    }
+    
+    #quotedesc{
+        grid-area: quotedesc;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    #flyer{
+        grid-area: flyer;
+        margin-top: 75px;
+    }
+
+    #flyer img{
+        width: 25em;
+        margin-left: 1em;
+    }
+    
+    #flyermockup1{
+        grid-area: flyer1;
+        margin-top: 50px;
+    }
+
+    #flyermockup1 img{
+        height: 32em;
+        margin-left: 5.5em;
+    }
+    
+    #flyermockup2{
+        grid-area: flyer2;
+        margin-top: 3em;
+    }
+
+    #flyermockup2 img{
+        height: 25em;
+    }
+    
+    #flyerdesc{
+        grid-area: flyerdesc;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    #album1{
+        grid-area: album1;
+        margin-top: 120px;
+    }
+
+    #album1 img{
+        width: 25em;
+        margin-left: 10em;
+    }
+    
+    #album1mockup1{
+        grid-area: album11;
+        margin-top: 50px;
+    }
+
+    #album1mockup1 img{
+        height: 34em;
+        margin-right: .2em;
+    }
+    
+    #album1mockup2{
+        grid-area: album12;
+        margin-top: 3em;
+    }
+
+    #album1mockup2 img{
+        height: 25em;
+    }
+    
+    #album1desc{
+        grid-area: album1desc;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    #album2{
+        grid-area: album2;
+        margin-top: 100px;
+    }
+    
+    #album2 img{
+        width: 25em;
+        margin-left: 6em;
+    }
+
+    #album2mockup1{
+        grid-area: album21;
+        margin-top: 50px;
+        margin-left: 75px;
+    }
+
+    #album2mockup1 img{
+        height: 33em;
+    }
+    
+    #album2mockup2{
+        grid-area: album22;
+        margin-top: 3em;
+    }
+    
+    #album2mockup2{
+        height: 25em;
+    }
+
+    #album2desc{
+        grid-area: album2desc;
+        margin-left: 100px;
+        margin-right: 100px; 
+    }
+    
+    #logoheader{
+        grid-area: logoheader;
+        margin-top: 130px;
+        margin-right: -.2em;
+    }
+    
+    #logo1{
+        grid-area: logo1;
+       margin-right: 13em;
+    }
+    
+    
+    #logo1mockup{
+        grid-area: logo1mockup;
+        margin-left: 7em;
+    }
+
+    
+
+    
+    #logo2{
+        grid-area: logo2;
+        margin-top: 20px;
+       margin-right: 13em;
+    }
+    
+    #logo2mockup{
+        grid-area: logo2mockup;
+        margin-top: 20px;
+        margin-left: 7em;
+    }
+    
+    #logodesc{
+        grid-area: logodesc;
+        margin-top: 2em;
+    }
+
+    #logodesc p{
+        margin-right: 9em;
+        margin-left: 9em;
+    }
+    
+    #designcontact{
+        grid-area: designcontact;
+        margin-top: 100px;
+    }
+      
+    #designfooter{
+        grid-area: designfooter;
+    }
+
+}
+
+@media screen and (max-width:600px){
+
+    #design_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;    
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        gap: 15px;
+        grid-template-areas: 
+          'movieposter          movieposter'
+          'movie1               movie1'
+          'movie2               movie2'
+          'moviedesc            moviedesc'         
+          'album1               album1'
+          'album11              album11'
+          'album12              album12'
+          'album1desc           album1desc'   
+          'album2               album2'
+          'album21               album21'
+          'album22              album22'
+          'album2desc           album2desc'    
+          'quote                quote'              
+          'quote1               quote1'         
+          'quote2               quote2'
+          'quotedesc            quotedesc'
+          'flyer                flyer'
+          'flyer1               flyer1'          
+          'flyer2               flyer2'
+          'flyerdesc            flyerdesc'
+          'logoheader           logoheader'
+          'logo1                logo1'
+          'logo1mockup          logo1mockup'
+          'logo2                logo2'
+          'logo2mockup          logo2mockup'  
+          'logodesc             logodesc'
+          'designcontact        designcontact'
+          'designfooter         designfooter'
+    
+    
+        
+        ;
+        justify-items: center;
+        margin: 0 auto;
+    }
+
+
+    #movie_poster{
+        grid-area: movieposter;
+        margin-top: 2em;
+    }
+
+    #movie_poster h2{
+        margin-left: 1em;
+    }
+
+    #movie_poster img{
+        width: 275px;
+        margin-left: 2em;
+    }
+    
+    #moviemockup1{
+        grid-area: movie1;
+        margin-top: 10px;
+        margin-left: 7em;
+    }
+
+    #moviemockup1 img{
+        height: 24em;
+        margin-top: 2em;
+    }
+    
+    #moviemockup2{
+        grid-area: movie2;
+        margin-top: 3em;
+        margin-left: 23px;
+    }
+
+    #moviemockup2 img{
+        height: 15em;
+    }
+
+    
+    #movie_description{
+        grid-area: moviedesc;
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-bottom: 75px;
+    }
+    
+    #quote_post{
+        grid-area: quote;
+        margin-top: 100px;
+    }
+
+    #quote_post img{
+        width: 275px;
+        margin-left: 10em;
+    }
+    
+    #quotemockup1{
+        grid-area: quote1;
+        margin-top: 50px;
+    }
+
+    #quotemockup1 img{
+        height: 24em;
+        margin-left: 2em;
+    }
+    
+    #quotemockup2{
+        grid-area: quote2;
+        margin-top: 3em;
+    }
+
+    #quotemockup2 img{
+        height: 15em;
+    }
+    
+    #quotedesc{
+        grid-area: quotedesc;
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    
+    #flyer{
+        grid-area: flyer;
+        margin-top: 75px;
+    }
+
+    #flyer img{
+        width: 275px;
+        margin-right: 30px;
+    }
+    
+    #flyermockup1{
+        grid-area: flyer1;
+        margin-top: 50px;
+    }
+
+    #flyermockup1 img{
+        height: 24em;
+        margin-left: 4em;
+    }
+    
+    #flyermockup2{
+        grid-area: flyer2;
+        margin-top: 3em;
+    }
+
+    #flyermockup2 img{
+        height: 15em;
+    }
+    
+    #flyerdesc{
+        grid-area: flyerdesc;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    #album1{
+        grid-area: album1;
+        margin-top: 120px;
+    }
+
+    #album1 img{
+        width: 275px;
+        margin-left: 10em;
+    }
+    
+    #album1mockup1{
+        grid-area: album11;
+        margin-top: 50px;
+    }
+
+    #album1mockup1 img{
+        height: 24em;
+        margin-right: .2em;
+    }
+    
+    #album1mockup2{
+        grid-area: album12;
+        margin-top: 3em;
+    }
+
+    #album1mockup2 img{
+        height: 15em;
+    }
+    
+    #album1desc{
+        grid-area: album1desc;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    #album2{
+        grid-area: album2;
+        margin-top: 100px;
+    }
+    
+    #album2 img{
+        width: 275px;
+        margin-left: 10em;
+    }
+
+    #album2mockup1{
+        grid-area: album21;
+        margin-top: 50px;
+        margin-left: 75px;
+    }
+
+    #album2mockup1 img{
+        height: 24em;
+    }
+    
+    #album2mockup2{
+        grid-area: album22;
+        margin-top: 3em;
+    }
+    
+    #album2mockup2 img{
+        height: 15em;
+        margin-bottom: 0;
+    }
+
+    #album2desc{
+        grid-area: album2desc;
+        margin-left: 100px;
+        margin-right: 100px; 
+        margin-top: -150px;
+    }
+    
+    #logoheader{
+        grid-area: logoheader;
+        margin-top: 130px;
+        margin-right: -.2em;
+    }
+    
+    #logo1{
+        grid-area: logo1;
+       margin-right: 10em;
+      
+    }
+    
+    
+    #logo1mockup{
+        grid-area: logo1mockup;
+        margin-left: 7em;
+    }
+
+    
+
+    
+    #logo2{
+        grid-area: logo2;
+        margin-top: 20px;
+       margin-right: 10em;
+    }
+    
+    #logo2mockup{
+        grid-area: logo2mockup;
+        margin-top: 20px;
+        margin-left: 7em;
+    }
+    
+    #logodesc{
+        grid-area: logodesc;
+        margin-top: 2em;
+    }
+
+    #logodesc p{
+        margin-right: 9em;
+        margin-left: 9em;
+    }
+    
+    #designcontact{
+        grid-area: designcontact;
+        margin-top: 100px;
+    }
+      
+    #designfooter{
+        grid-area: designfooter;
+    }
+
+}
+
+
+/* ---DRAWING PAGE MEDIA QUERY'S--- */
+
+
+@media screen and (max-width: 1000px){
+    #drawing_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;   
+        grid-template-rows: auto auto auto auto;
+        gap: 5px;
+        grid-template-areas: 
+            'title1                 title1'
+            'draw1                  color1'               
+            'color2                 color2'
+            'draw1desc              draw1desc'
+            'title2                 title2'
+            'draw2                  ball1'              
+            'ball2                  ball2'
+            'balldesc               balldesc'
+            'title3                 title3'
+            'draw3                  graphite11'         
+            'graphite12             graphite12'
+            'graphite1desc          graphite1desc'
+            'title4                 title4'
+            'draw4                  graphite21'         
+            'graphite22             graphite22'
+            'graphite2desc          graphite2desc'
+            'drcontact              drcontact'
+            'drfooter               drfooter'
+        ;
+        justify-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    
+    }
+    
+    #draw1title{
+        grid-area: title1;
+    } 
+    
+    #draw1{
+        grid-area: draw1;
+        margin-bottom: 15px;
+    }
+    
+    #colormockup1{
+        grid-area: color1;
+        margin-bottom: 15px;
+        padding-right: 55px;
+    }
+    
+    #colormockup2{
+        grid-area: color2;
+        margin-bottom: 15px;
+        padding-right: 25px;
+    }
+    
+    #draw1desc{
+        grid-area: draw1desc;
+        margin-bottom: 50px;
+        margin-left: 95px;
+        margin-right: 50px;
+    }
+    
+    #draw2title{
+        grid-area: title2;
+    }
+    
+    
+    #draw2{
+        grid-area: draw2;
+        margin-bottom: 15px;
+    }
+    
+    #ballpointmockup1{
+        grid-area: ball1;
+        margin-bottom: 15px;
+    }
+    
+    #ballpointmockup2{
+        grid-area: ball2;
+        margin-bottom: 15px;
+    }
+    
+    #ballpointdesc{
+        grid-area: balldesc;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    #draw3title{
+        grid-area: title3;
+    }
+    
+    #draw3{
+        grid-area: draw3;
+        margin-bottom: 15px;
+    }
+    
+    #graphite1mockup1{
+        grid-area: graphite11;
+        margin-bottom: 15px;
+        padding-right: 55px;
+    }
+    
+    #graphite1mockup2{
+        grid-area: graphite12;
+        margin-bottom: 15px;
+        padding-right: 25px;
+    }
+    
+    #graphite1desc{
+        grid-area: graphite1desc ;
+        margin-bottom: 50px;
+        margin-left: 85px;
+        margin-right: 50px;
+    }
+    
+    #draw4title{
+        grid-area: title4;
+    }
+    
+    #draw4{
+        grid-area: draw4;
+        margin-bottom: 15px;
+    }
+    
+    #graphite2mockup1{
+        grid-area: graphite21;
+        margin-bottom: 15px;
+        padding-right: 55px;
+    }
+    
+    #graphite2mockup2{
+        grid-area: graphite22;
+        margin-bottom: 15px;
+        padding-right: 25px;
+    }
+    
+    #graphite2desc{
+        grid-area: graphite2desc;
+        margin-bottom: 50px;
+        margin-left: 100px;
+        margin-right: 50px;
+    }
+    
+    #drcontact{
+        grid-area: drcontact;
+    }
+    
+    #drfooter{
+        grid-area: drfooter;
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+    #drawing_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;   
+        grid-template-rows: auto auto auto auto;
+        gap: 5px;
+        grid-template-areas: 
+            'title1                 title1'
+            'draw1                  color1'               
+            'color2                 color2'
+            'draw1desc              draw1desc'
+            'title2                 title2'
+            'draw2                  ball1'              
+            'ball2                  ball2'
+            'balldesc               balldesc'
+            'title3                 title3'
+            'draw3                  graphite11'         
+            'graphite12             graphite12'
+            'graphite1desc          graphite1desc'
+            'title4                 title4'
+            'draw4                  graphite21'         
+            'graphite22             graphite22'
+            'graphite2desc          graphite2desc'
+            'drcontact              drcontact'
+            'drfooter               drfooter'
+        ;
+        justify-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    
+    }
+
+    #drawing_grid img{
+        height: 300px;
+    }
+    
+    #draw1title{
+        grid-area: title1;
+    } 
+    
+    #draw1{
+        grid-area: draw1;
+        margin-bottom: 15px;
+        margin-left: 60px;
+    }
+    
+    #colormockup1{
+        grid-area: color1;
+        margin-bottom: 15px;
+        padding-right: 55px;
+        margin-right: 30px;
+    }
+    
+    #colormockup2{
+        grid-area: color2;
+        margin-bottom: 15px;
+        padding-right: 25px;
+    }
+    
+    #draw1desc{
+        grid-area: draw1desc;
+        margin-bottom: 50px;
+        margin-left: 95px;
+        margin-right: 95px;
+    }
+    
+    #draw2title{
+        grid-area: title2;
+    }
+    
+    
+    #draw2{
+        grid-area: draw2;
+        margin-bottom: 15px;
+        margin-left: 60px;
+    }
+    
+    #ballpointmockup1{
+        grid-area: ball1;
+        margin-bottom: 15px;
+        margin-right: 30px;
+    }
+    
+    #ballpointmockup2{
+        grid-area: ball2;
+        margin-bottom: 15px;
+    }
+    
+    #ballpointdesc{
+        grid-area: balldesc;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    #draw3title{
+        grid-area: title3;
+    }
+    
+    #draw3{
+        grid-area: draw3;
+        margin-bottom: 15px;
+        margin-left: 80px;
+    }
+    
+    #graphite1mockup1{
+        grid-area: graphite11;
+        margin-bottom: 15px;
+        padding-right: 55px;
+        margin-right: 55px;
+    }
+    
+    #graphite1mockup2{
+        grid-area: graphite12;
+        margin-bottom: 15px;
+        padding-right: 25px;
+    }
+    
+    #graphite1desc{
+        grid-area: graphite1desc ;
+        margin-bottom: 50px;
+        margin-left: 85px;
+        margin-right: 50px;
+    }
+    
+    #draw4title{
+        grid-area: title4;
+    }
+    
+    #draw4{
+        grid-area: draw4;
+        margin-bottom: 15px;
+        margin-left: 100px;
+    }
+    
+    #graphite2mockup1{
+        grid-area: graphite21;
+        margin-bottom: 15px;
+        padding-right: 105px;
+    }
+    
+    #graphite2mockup2{
+        grid-area: graphite22;
+        margin-bottom: 15px;
+        padding-right: 25px;
+    }
+    
+    #graphite2desc{
+        grid-area: graphite2desc;
+        margin-bottom: 50px;
+        margin-left: 100px;
+        margin-right: 50px;
+    }
+    
+    #drcontact{
+        grid-area: drcontact;
+    }
+    
+    #drfooter{
+        grid-area: drfooter;
+    }
+
+}
+
+
+@media screen and (max-width: 600px){
+
+        #drawing_grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;   
+            grid-template-rows: auto auto auto auto;
+            gap: 5px;
+            grid-template-areas: 
+                'title1                 title1'
+                'draw1                  draw1'
+                'color1                 color1'               
+                'color2                 color2'
+                'draw1desc              draw1desc'
+                'title2                 title2'
+                'draw2                  draw2'
+                'ball1                  ball1'              
+                'ball2                  ball2'
+                'balldesc               balldesc'
+                'title3                 title3'
+                'draw3                  draw3'
+                'graphite11             graphite11'         
+                'graphite12             graphite12'
+                'graphite1desc          graphite1desc'
+                'title4                 title4'
+                'draw4                  draw4'
+                'graphite21             graphite21'         
+                'graphite22             graphite22'
+                'graphite2desc          graphite2desc'
+                'drcontact              drcontact'
+                'drfooter               drfooter'
+            ;
+            justify-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        
+        }
+    
+        #drawing_grid img{
+            height: 350px;
+        }
+        
+        #draw1title{
+            grid-area: title1;
+        } 
+        
+        #draw1{
+            grid-area: draw1;
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+        
+        #colormockup1{
+            grid-area: color1;
+            margin-bottom: 15px;
+            padding-right: 10px;
+            margin-left: 50px;
+        }
+        
+        #colormockup2{
+            grid-area: color2;
+            margin-bottom: 15px;
+            padding-right: 25px;
+        }
+        
+        #draw1desc{
+            grid-area: draw1desc;
+            margin-bottom: 50px;
+            margin-left: 95px;
+            margin-right: 95px;
+        }
+        
+        #draw2title{
+            grid-area: title2;
+        }
+        
+        
+        #draw2{
+            grid-area: draw2;
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+        
+        #ballpointmockup1{
+            grid-area: ball1;
+            margin-bottom: 15px;
+            margin-right: 30px;
+        }
+        
+        #ballpointmockup2{
+            grid-area: ball2;
+            margin-bottom: 15px;
+        }
+        
+        #ballpointdesc{
+            grid-area: balldesc;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        
+        #draw3title{
+            grid-area: title3;
+        }
+        
+        #draw3{
+            grid-area: draw3;
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+        
+        #graphite1mockup1{
+            grid-area: graphite11;
+            margin-bottom: 15px;
+            padding-right: 5px;
+            margin-left: 70px;
+        }
+        
+        #graphite1mockup2{
+            grid-area: graphite12;
+            margin-bottom: 15px;
+            padding-right: 25px;
+        }
+        
+        #graphite1desc{
+            grid-area: graphite1desc ;
+            margin-bottom: 50px;
+            margin-left: 60px;
+            margin-right: 50px;
+        }
+        
+        #draw4title{
+            grid-area: title4;
+        }
+        
+        #draw4{
+            grid-area: draw4;
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+        
+        #graphite2mockup1{
+            grid-area: graphite21;
+            margin-bottom: 15px;
+            padding-right: 10px;
+            margin-left: 20px;
+        }
+        
+        #graphite2mockup2{
+            grid-area: graphite22;
+            margin-bottom: 15px;
+            padding-right: 25px;
+        }
+        
+        #graphite2desc{
+            grid-area: graphite2desc;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        
+        #drcontact{
+            grid-area: drcontact;
+        }
+        
+        #drfooter{
+            grid-area: drfooter;
+        }
+    
+}
